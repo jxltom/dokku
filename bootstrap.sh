@@ -120,7 +120,7 @@ install-dokku-from-deb-package() {
     echo "    Installation will continue in 10 seconds."
     sleep 10
   fi
-  wget -nv -O - https://get.docker.com/ | sh
+  wget -nv -O - https://get.docker.com/ | sh -s -- --mirror Aliyun
 
   if [[ "$DOKKU_DISTRO_VERSION" == "14.04" ]]; then
     echo "--> Adding nginx PPA"
